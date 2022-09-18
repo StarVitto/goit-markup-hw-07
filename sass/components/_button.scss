@@ -19,7 +19,13 @@
     border-radius: 4px;
     border: none;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--primary-bg-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);}
 }
 
 .button-secodary {
@@ -32,26 +38,8 @@
     padding: 6px 25px;
 }
 
-.button.secodary:hover,
-.button.secodary:focus {
-    color: var(--primary-bg-color);
-    background-color: var(--accent-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-        0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
 .btn-secodary:not(:last-child) {
     margin: 0 8px 0 0;
-}
-
-.button.primary:hover,
-.button.primary:focus {
-    background: var(--buttun);
-    box-shadow: 0 4px 4px rgb(0, 0, 0, 0.15);
-}
-
-.button.btn {
-    padding: 6px 25px;
 }
 
 .button.primary {
@@ -70,6 +58,10 @@
     justify-content: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background: var(--buttun);
+    box-shadow: 0 4px 4px rgb(0, 0, 0, 0.15);}
 }
 
 .button-mail {
@@ -114,10 +106,8 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: none;
-}
-
-.button-modal:hover {
+  &:hover {
     background: var(--buttun);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
+    border-radius: 4px;}
 }

@@ -1,33 +1,3 @@
-:root {
-  --primari-text-color: #212121;
-  --title-text-color: #757575;
-  --team-text--background: #ffffff;
-  --accent-color: #2196f3;
-  --primary-bg-color: #ffffff;
-  --studio: #000000;
-  --background: #f5f4fa;
-  --contact: rgb(255, 255, 255, 0.6);
-  --heder-footer: #2f303a;
-  --border--headr: #ececec;
-  --buttun: #188ce8;
-  --border--icon: #eeeeee;
-  --link-f-in-twit: #afb1b8;
-  --outline--background-color: #c4c4c4;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 *,
 *::before,
 *::after {
@@ -64,27 +34,175 @@ address {
   font-style: normal;
 }
 
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .container {
   margin: 0 auto;
   max-width: 1200px;
   padding: 0 15px;
 }
 
-.overlay {
-  max-width: 1600px;
-  height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  outline: 1px solid var(--outline--background-color);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.button {
+  font-family: "Roboto";
+  cursor: pointer;
+  border: 1px solid transparent;
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 500;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.button.secodary {
+  color: var(--primari-text-color);
+  background-color: var(--background);
+  padding: 6px 22px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  border-radius: 4px;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button.secodary:hover, .button.secodary:focus {
+  color: var(--primary-bg-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.button-secodary {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.button.btn {
+  padding: 6px 25px;
+}
+
+.btn-secodary:not(:last-child) {
+  margin: 0 8px 0 0;
+}
+
+.button.primary {
+  color: var(--primary-bg-color);
+  background-color: var(--accent-color);
+  min-width: 216px;
+  padding: 10px 32px;
+  font-weight: 700;
+  line-height: 1.88;
+  display: flex;
+  border-radius: 4px;
+  text-align: center;
+  align-items: center;
+  letter-spacing: 0.06em;
+  border: none;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button.primary:hover, .button.primary:focus {
+  background: var(--buttun);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.button-mail {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  padding: 10px 28px;
+  margin-left: 12px;
+  color: #ffffff;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+}
+
+.svg-btn {
+  margin-left: 10px;
+}
+
+.button-modal {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  padding: 10px 52px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 0.06em;
+  margin: 0 164px;
+  color: var(--team-text--background);
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+}
+.button-modal:hover {
+  background: var(--buttun);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.page-logo {
+  margin-right: 93px;
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+
+.logo {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.team-svg {
+  fill: currentColor;
+}
+
+.svg-logo {
+  display: flex;
+}
+
+.svg-logo-list:not(:last-child) {
+  width: calc((100% - 150px) / 6);
+  margin-right: 30px;
+}
+
+.svg-logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--link-f-in-twit);
+  border-radius: 4px;
+  color: var(--link-f-in-twit);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.svg-logo-link:hover, .svg-logo-link:focus {
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+
+.icon-svg {
+  fill: currentColor;
 }
 
 .modal {
@@ -127,9 +245,19 @@ address {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   color: var(--studio);
   background: var(--primary-bg-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: border, color;
+  transition-duration: 250ms, 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0s, 0s;
+}
+.btn-close:hover, .btn-close:focus {
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
 .icon-close:hover,
@@ -275,175 +403,16 @@ label {
   cursor: default;
 }
 
-.button {
-  font-family: "Roboto";
-  cursor: pointer;
-  border: 1px solid transparent;
-  display: block;
-  font-size: 16px;
-  text-align: center;
-  font-weight: 500;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-.button.secodary {
-  color: var(--primari-text-color);
-  background-color: var(--background);
-  padding: 6px 22px;
-  line-height: 1.6;
-  letter-spacing: 0.03em;
-  border-radius: 4px;
-  border: none;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.button-secodary {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-.button.btn {
-  padding: 6px 25px;
-}
-
-.button.secodary:hover,
-.button.secodary:focus {
-  color: var(--primary-bg-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
-.btn-secodary:not(:last-child) {
-  margin: 0 8px 0 0;
-}
-
-.button.primary:hover,
-.button.primary:focus {
-  background: var(--buttun);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-}
-
-.button.btn {
-  padding: 6px 25px;
-}
-
-.button.primary {
-  color: var(--primary-bg-color);
-  background-color: var(--accent-color);
-  min-width: 216px;
-  padding: 10px 32px;
-  font-weight: 700;
-  line-height: 1.88;
-  display: flex;
-  border-radius: 4px;
-  text-align: center;
-  align-items: center;
-  letter-spacing: 0.06em;
-  border: none;
-  justify-content: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.button-mail {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  width: 200px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  padding: 10px 28px;
-  margin-left: 12px;
-  color: #ffffff;
-  background: #2196f3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
-}
-
-.svg-btn {
-  margin-left: 10px;
-}
-
-.button-modal {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  padding: 10px 52px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  letter-spacing: 0.06em;
-  margin: 0 164px;
-  color: var(--team-text--background);
-  background: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
-}
-
-.button-modal:hover {
-  background: var(--buttun);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-}
-
-.page-logo {
-  margin-right: 93px;
-  padding-top: 23px;
-  padding-bottom: 23px;
-}
-
-.logo {
-  color: var(--accent-color);
-  text-decoration: none;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-}
-
-.team-svg {
-  fill: currentColor;
-}
-
-.svg-logo {
-  display: flex;
-}
-
-.svg-logo-list:not(:last-child) {
-  width: calc((100% - 150px) / 6);
-  margin-right: 30px;
-}
-
-.svg-logo-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 170px;
-  height: 92px;
-  border: 1px solid var(--link-f-in-twit);
-  border-radius: 4px;
-  color: var(--link-f-in-twit);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.icon-svg {
-  fill: currentColor;
-}
-
-.svg-logo-link:hover,
-.svg-logo-link:focus {
-  color: var(--accent-color);
-  border: 1px solid var(--accent-color);
+.overlay {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid var(--outline--background-color);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .footer {
@@ -494,11 +463,6 @@ label {
 
 .footer-contact-list:not(:last-child) {
   margin-bottom: 9px;
-}
-
-.footer-contact {
-  color: var(--contact);
-  text-decoration: none;
 }
 
 .footer-contact:hover,
@@ -560,88 +524,6 @@ label {
   padding: 15px 295px 15px 16px;
 }
 
-.sidebar {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.sidebar a {
-  color: var(--primari-text-color);
-  text-decoration: none;
-}
-
-.sidebar h2 {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-}
-
-.sidebar p {
-  color: var(--title-text-color);
-  font-size: 16px;
-  line-height: 1.9;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-  letter-spacing: 0.03em;
-}
-
-.sidebar-list {
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
-}
-
-.sidebar-list:nth-child(3n) {
-  margin-right: 0;
-}
-
-.sidebar-list:nth-last-child(-n+3) {
-  margin-bottom: 0;
-}
-
-.sidebar-text {
-  padding: 20px 24px;
-  border-right: 1px solid var(--border--icon);
-  border-left: 1px solid var(--border--icon);
-  border-bottom: 1px solid var(--border--icon);
-}
-
-.sidebar-text h2 {
-  margin-bottom: 4px;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 36px;
-  letter-spacing: 0.06em;
-}
-
-.sidebar-position {
-  position: relative;
-}
-
-.sidebar-text-img {
-  font-weight: 700;
-  line-height: 1.14;
-  display: flex;
-  position: absolute;
-  width: 100%;
-  height: 70px;
-  bottom: 0;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
-  color: var(--team-text--background);
-  background: rgba(47, 48, 58, 0.8);
-}
-
-.section-sidebar {
-  padding-top: 0;
-}
-
 .page-header {
   height: 80px;
   border-bottom: 1px solid var(--border--headr);
@@ -665,7 +547,6 @@ label {
   line-height: 16px;
   letter-spacing: 0.02em;
 }
-
 .main-contact:not(:last-child) {
   margin-right: 50px;
 }
@@ -683,6 +564,9 @@ label {
   padding: 32px 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.nav-link:hover::after, .nav-link:focus::after {
+  transform: scaleX(1);
+}
 
 .nav-link.current::after {
   position: absolute;
@@ -697,11 +581,6 @@ label {
   transform: scaleX(1);
 }
 
-.nav-link:hover::after,
-.nav-link:focus::after {
-  transform: scaleX(1);
-}
-
 .site-nav {
   display: flex;
   font-family: "Roboto";
@@ -712,14 +591,12 @@ label {
   letter-spacing: 0.02em;
 }
 
-.link:hover,
-.link:focus {
-  color: var(--accent-color);
-}
-
 .link {
   color: inherit;
   text-decoration: none;
+}
+.link:hover, .link:focus {
+  color: var(--accent-color);
 }
 
 .link.current {
@@ -741,7 +618,6 @@ label {
 
 .list {
   list-style: none;
-  margin: 0;
   padding-left: 0;
 }
 
@@ -749,7 +625,6 @@ label {
   max-width: 1200px;
   height: auto;
 }
-
 .list-img:not(:last-child) {
   margin-right: 30px;
 }
@@ -762,21 +637,13 @@ label {
   align-items: center;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.contact-link:hover, .contact-link:focus {
+  color: var(--accent-color);
+}
 
 .contact-link .icon-contact {
   margin-right: 10px;
   fill: currentColor;
-}
-
-.contact.list {
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
-
-.contact-link:hover,
-.contact-link:focus {
-  color: var(--accent-color);
 }
 
 .hero {
@@ -824,7 +691,6 @@ label {
 .title-text {
   max-width: 270px;
 }
-
 .title-text:not(:last-child) {
   margin-right: 30px;
 }
@@ -857,7 +723,6 @@ label {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-
 .team-text:not(:last-child) {
   margin-right: 30px;
 }
@@ -865,7 +730,6 @@ label {
 .team-list {
   display: flex;
 }
-
 .team-list h3 {
   font-family: "Roboto";
   font-weight: 500;
@@ -873,7 +737,6 @@ label {
   line-height: 1.2;
   margin-bottom: 10px;
 }
-
 .team-list p {
   color: var(--title-text-color);
   font-size: 16px;
@@ -902,9 +765,7 @@ label {
   color: var(--link-f-in-twit);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.team-link:hover,
-.team-link:focus {
+.team-link:hover, .team-link:focus {
   color: var(--team-text--background);
   background-color: var(--accent-color);
 }
@@ -955,9 +816,7 @@ label {
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.footer-link-svg:hover,
-.footer-link-svg:focus {
+.footer-link-svg:hover, .footer-link-svg:focus {
   background-color: var(--accent-color);
 }
 
@@ -1008,9 +867,113 @@ label {
   text-decoration: none;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.portfolio-link:hover,
-.portfolio-link:focus {
+.portfolio-link:hover, .portfolio-link:focus {
   display: block;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.sidebar {
+  display: flex;
+  flex-wrap: wrap;
+}
+.sidebar a {
+  color: var(--primari-text-color);
+  text-decoration: none;
+}
+.sidebar h2 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.sidebar p {
+  color: var(--title-text-color);
+  font-size: 16px;
+  line-height: 1.9;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+}
+
+.sidebar-list {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.sidebar-list:nth-child(3n) {
+  margin-right: 0;
+}
+.sidebar-list:nth-last-child(-n+3) {
+  margin-bottom: 0;
+}
+
+.sidebar-text {
+  padding: 20px 24px;
+  border-right: 1px solid var(--border--icon);
+  border-left: 1px solid var(--border--icon);
+  border-bottom: 1px solid var(--border--icon);
+}
+.sidebar-text h2 {
+  margin-bottom: 4px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 0.06em;
+}
+
+.sidebar-position {
+  position: relative;
+}
+
+.sidebar-text-img {
+  font-weight: 700;
+  line-height: 1.14;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: var(--team-text--background);
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.section-sidebar {
+  padding-top: 0;
+}
+
+:root {
+  --primari-text-color: #212121;
+  --title-text-color: #757575;
+  --team-text--background: #ffffff;
+  --accent-color: #2196f3;
+  --primary-bg-color: #ffffff;
+  --studio: #000000;
+  --background: #f5f4fa;
+  --contact: rgb(255, 255, 255, 0.6);
+  --heder-footer: #2f303a;
+  --border--headr: #ececec;
+  --buttun: #188ce8;
+  --border--icon: #eeeeee;
+  --link-f-in-twit: #afb1b8;
+  --outline--background-color: #c4c4c4;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }/*# sourceMappingURL=main.css.map */
